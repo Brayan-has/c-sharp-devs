@@ -9,7 +9,8 @@ class Program{
   Se debe instanciar 4 objetos diferentes y reasignar el valor de cada atributo por el que usted quiera, solo va a dejar los valores por defecto del primer objeto. Alfinal almacenar cada objeto (instancia) en un arreglo
   
   pdata: La clase debe estar en otro archivo .cs en otra carpeta.
-  */ 
+  */  
+ 
     
   }
 }
