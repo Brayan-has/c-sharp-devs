@@ -1,0 +1,67 @@
+using System;
+       
+class Program
+{
+    //Crear otro atributo, y crear los métodos get y set para ambos atributos;
+    public static void Main(string[] args)
+    {
+        Estudios respuesta = new Estudios("filosofia", "cuarto semestre");
+
+        //esto es el método Get
+        //no se le pone al metodo Get no se le ponen arGumentos
+        Console.WriteLine(respuesta.nombreCarrera());
+        Console.WriteLine(respuesta.semestre());
+
+        //esto es el metodo Set
+        //a este si se le ponen arGumentos
+        respuesta.SetNombreCarrera("derecho");
+        respuesta.SetSemestre("quinto semestre");
+
+
+        Console.WriteLine(respuesta.nombreCarrera());
+        
+    }
+}
+
+
+class Estudios
+{   //atributosÑ
+    private string _nombreCarrera;
+    private string _semestre;
+    //cosntructor
+    public Estudios(string nombreCarrera, string semestre)
+    {
+        this._nombreCarrera = nombreCarrera;
+        this._semestre = semestre;
+
+    }
+
+    //metodo get 1
+
+    public string nombreCarrera()
+    {
+        return this._nombreCarrera;
+    }
+    //metodo get 2
+    public string semestre()
+    {
+        return this._semestre;
+    }
+    //metod set 1
+    public void SetNombreCarrera(string nombreCarrera)
+    {
+        this._nombreCarrera =  nombreCarrera;
+    }
+    //metodo set 2
+    public void SetSemestre(string semestre)
+    {
+        this._semestre = semestre;
+    }
+}
+
+
+ /*
+    git add --all 
+    git commit -m""
+    git pull origin main
+  */
