@@ -16,6 +16,7 @@ class Pelicula{
         puntajeFinal = "";
 
     } 
-    //Aquí irán los métodos
+    //Aquí irán los métodos 
+    
     
 }
