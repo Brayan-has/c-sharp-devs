@@ -63,5 +63,5 @@ class Estudios
  /*
     git add --all 
     git commit -m""
-    git pull origin main
+    git pull origin main = para traer los cambios del repo remoto al local
   */
