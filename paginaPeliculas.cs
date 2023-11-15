@@ -18,29 +18,38 @@ class PaginaPirata
 
     public PaginaPirata(string nombrePelicula, string fechaEstreno, string reseña, decimal puntuaciones)
     {
-        this._nombrePelicula = "Soul";
-        this._fechaEstreno = "11 de Octubre de 2020";
-        this.__reseña = "Un profesor de música que ha perdido la pasión se transporta fuera de su cuerpo al ´Gran Antes´ y debe encontrar el camino de regreso con la ayuda de un alma infantil que aprende sobre sí misma.";
-        this._puntuaciones = 7.4;
+        this._nombrePelicula = nombrePelicula;
+        this._fechaEstreno = fechaEstreno;
+        this.__reseña = reseña;
+        this._puntuaciones = puntuaciones;
     }
 
     public string nombrePelicula
     {   get { return _nombrePelicula;}
-        set {nombrePelicula = value;} 
+        set {this._nombrePelicula = value;} 
     }
     public string fechaEstreno
     {
         get {return _fechaEstreno;}
-        set {fechaEstreno = value;}
+        set {this._fechaEstreno = value;}
     }
     public string reseña
     {
-        get {return _reseña;}
-        set {reseña = value;}
+        get {return __reseña;}
+        set {this.__reseña = value;}
     }
     public decimal puntuaciones
     {
         get {return _puntuaciones;}
-        set {puntuaciones = value;}
+        set {this._puntuaciones = value;}
     }
+
+    public void peliculaPirata()
+    {
+        Console.WriteLine($"nombre de la pelicula: {nombrePelicula}");
+        Console.WriteLine($"fecha de estreno: {fechaEstreno}");
+        Console.WriteLine($"reseña: {reseña}");
+        Console.WriteLine($"puntuacion {puntuaciones}");
+    }
+
 }

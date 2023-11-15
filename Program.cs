@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-class Program{
+class Program
+{
 
-  public static void Main(string[] args){
-  
   /*
-  crear una clase en un archivo externo para un proyecto de una página de películas piratas, esta clase debe tener 4 atributos que servirá para mostrar en un método lo siguiente: las reseñas, nombre de la película, fecha de la película y la puntuación de la misma. A su vez cada atrubuto deberá tener su método get y su método set.
   
-  */  
- 
-    
-
+  crear un método get y un método set de un animal con una clase anónima
   
+  */
 
+  public static void Main(string[] args)
+  {
+    PaginaPirata pirate = new PaginaPirata("Soul", "11 de octubre de 2020", "Un profesor de música que ha perdido la pasión se transporta fuera de su cuerpo al 'Gran Antes' y debe encontrar el camino de regreso con la ayuda de un alma infantil que aprende sobre sí misma.", 7.3m);
 
-  
-
+    pirate.peliculaPirata();
 
   }
 }
