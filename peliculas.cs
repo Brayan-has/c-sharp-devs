@@ -9,7 +9,7 @@ class Peliculas
 
 //constructor
  
-public Peliculas(string terror, string comedia, string drama, string fantasia)
+public Peliculas()
 {
   this._terror = "anabelle";
   this._comedia = "¿y dónde está el fantasma?";
@@ -21,22 +21,22 @@ public Peliculas(string terror, string comedia, string drama, string fantasia)
 public string terror
 {
   get { return _terror;}
-  set {terror = value;}
+  set {this._terror = value;}
 }
 public string comedia
 {
   get { return _comedia;}
-  set {comedia = value;}
+  set {this._comedia = value;}
 }
 public string drama
 {
   get { return _drama;}
-  set {drama = value;}
+  set {this._drama = value;}
 }
 public string fantasia
 {
   get { return _fantasia;}
-  set {fantasia = value;}
+  set {this._fantasia = value;}
 }
 
 public void nombrePeliculas()
