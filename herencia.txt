@@ -1,0 +1,37 @@
+/*
+  herencia básica:
+  
+  
+  class Aguila : Volar{
+
+  private bool volar;
+
+
+}*/
+
+
+
+/*herencia con instrucción base
+
+class Caballo : Mamifero {
+
+// atributos
+private string _sonido;
+
+// constructor
+
+public Caballo(string nombre) : base(nombre){
+
+  this._sonido = nombre;
+}
+
+// método get y set 
+public string sonido{
+  get{return this._sonido;}
+  set{this._sonido = value;}
+}
+
+}
+
+
+*/

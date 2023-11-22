@@ -1,7 +1,7 @@
 //clase :V
 class Peliculas
 {
-  //atributos
+  //atributos 
   private string _terror;
   private string _comedia;
   private string _drama;
@@ -48,3 +48,23 @@ public void nombrePeliculas()
 }
   
 }
+
+/*
+
+ var animal = new {nombre ="Perro", color="Negro"};
+
+// \n new line (alt gr esta al lado de la tecla space + ? que esta al lado de la tecla del número cero )
+// \t tab
+Console.WriteLine("hola\tmundo");
+// esto se llama 
+//  Console.WriteLine(animal.color);
+
+
+ejercicio Duvian:
+
+  var animal = new {nombre = "León", habitat = "Sabana Africana", continente = "Africa"};
+
+  Console.WriteLine(animal.nombre);
+  Console.WriteLine(animal.habitat);
+  Console.WriteLine(animal.continente);
+*/

@@ -65,3 +65,7 @@ class Estudios
     git commit -m""
     git pull origin main = para traer los cambios del repo remoto al local
   */
+
+
+
+  
