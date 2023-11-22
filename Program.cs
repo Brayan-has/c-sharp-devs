@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
-class Program{
+class Progam
+{
 
   public static void Main(string[] args){
   
@@ -15,12 +15,20 @@ class Program{
  
     
 
-  
 
+    int fist = int.Parse(Console.ReadLine());
+    int second = int.Parse(Console.ReadLine());
 
-  
+    Calculator cal = new Calculator(fist, second);
 
-
+    cal.PlusNumber();
   }
 }
+
+
+
+
+
+
+
 
