@@ -3,35 +3,187 @@
 class Progam
 {
 
-  public static void Main(string[] args){
-  
-  /*
+  public static void Main(string[] args)
+  {
 
-  crear una clase en un archivo externo para un proyecto de una página de películas piratas, esta clase debe tener 4 atributos que servirá para mostrar en un método lo siguiente: las reseñas, nombre de la película, fecha de la película y la puntuación de la misma. A su vez cada atrubuto deberá tener su método get y su método set.
+    // 
+    Ordenador pcGamer = new Ordenador();
 
-  dame un momento please
+    int elegir = 0;
+    int info = 3;
+    // 
+    Console.WriteLine("Presiona el botón 1 para ver información de la computadora");
+    int pc = int.Parse(Console.ReadLine());
 
-  */  
- 
-    
+    if (pc != 1)
+    {
+
+      pcGamer.apagar(1);
+    }
+
+    pcGamer.Encendido(pc);
+    while (pc == 1)
+    {
 
 
-    int fist = int.Parse(Console.ReadLine());
-    int second = int.Parse(Console.ReadLine());
+      switch (elegir)
+      {
 
-    Calculator cal = new Calculator(fist, second);
+        case 0:
+          Console.WriteLine("elige una opción para poder hacer uso del Ordenador");
+          Console.WriteLine("1: información de la pc.\n2: continuar o apagar ordenador");
+          Console.WriteLine("3: para modificar los datos del disco\n4: para eliminar todos los datos del disco");
 
-    cal.PlusNumber();
-  /*crear una clase de tipo pélicula que tenga 4 atributos, cada atributo debe tener un método get y un método set, se deberá poner un valor por defecto para cada atributo en el constructor, (sin pedirse lo al usuario/desarrollador).
+          try
+          {
+            elegir = int.Parse(Console.ReadLine());
+          }
+          catch (Exception e)
+          {
+            Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+          }
+          break;
 
-  Se debe instanciar 4 objetos diferentes y reasignar el valor de cada atributo por el que usted quiera, solo va a dejar los valores por defecto del primer objeto. Alfinal almacenar cada objeto (instancia) en un arreglo
-  
-  pdata: La clase debe estar en otro archivo .cs en otra carpeta.
-  */  
- 
-    
+        case 1:
+          try
+          {
+
+            Console.WriteLine("Presiona 0 para ver información del equipo");
+            info = int.Parse(Console.ReadLine());
+          }
+          catch (Exception e)
+          {
+            Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+          }
+
+          if (info == 0)
+          {
+            Console.WriteLine($"Información principal:\n disco duro: {pcGamer.tamañoDisco}\n tamaño total del disco: {pcGamer.tamañoMaximoDisco}\n encendido: {pcGamer.encendido}");
+          }
+
+          try
+          {
+            Console.WriteLine("\nPresiona 0 para volver al menu\n Presiona 1 para volver a ver la información del ordenador\n Presiona 2 para pagar la pc\n3 para modificar los datos del oordenador");
+            elegir = int.Parse(Console.ReadLine());
+
+          }
+          catch (Exception e)
+          {
+            Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+          }
+
+          break;
+
+        case 2:
+
+          try
+          {
+            Console.WriteLine("¿Desea continuar? Presiona 1\nde lo contrario presione 0");
+            pc = int.Parse(Console.ReadLine());
+            pcGamer.apagar(pc);
+            if (pc == 1)
+            {
+              Console.WriteLine("\nelige otra opción del menú");
+              elegir = int.Parse(Console.ReadLine());
+            }
+          }
+          catch (Exception e)
+          {
+            Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+          }
+
+          break;
+
+
+        case 3:
+          Console.WriteLine("ingresa el valor real del disco en números enteros");
+          Console.WriteLine("añade primero el tamaño del disco, segundo el tamaño máximo del disco en decimales.");
+
+          try
+          {
+            int disco = int.Parse(Console.ReadLine());
+            float total = float.Parse(Console.ReadLine());
+            pcGamer.aniadirDatos(disco, total);
+
+            Console.WriteLine("\nelige otra opción del menú");
+            elegir = int.Parse(Console.ReadLine());
+          }
+          catch (Exception e)
+          {
+            Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+          }
+
+          break;
+
+        case 4:
+          string siNo = "";
+          try
+          {
+            Console.WriteLine("elimina los datos del disco\n para eliminar los datos presiona el numero 3");
+            int eliminar = int.Parse(Console.ReadLine());
+            if (eliminar == 3)
+            {
+              Console.WriteLine("¿Estás seguro?\nEscribe con si o no");
+              siNo = Console.ReadLine();
+            }
+            else
+            {
+              Console.WriteLine("\nNo fue posible eliminar los datos");
+              Console.WriteLine("\nelige otra opción del menú");
+              elegir = int.Parse(Console.ReadLine());
+            }
+
+            if (siNo == "si" || siNo == "Si" || siNo == "SI")
+            {
+              Console.Beep();
+              pcGamer.eliminarDatos();
+              try
+              {
+                Console.WriteLine("\nelige otra opción del menú");
+                elegir = int.Parse(Console.ReadLine());
+              }
+              catch (Exception e)
+              {
+                Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+              }
+            }
+            else if (siNo == "no" || siNo == "No" || siNo == "NO")
+            {
+
+              Console.WriteLine("Cancelado...");
+              try
+              {
+                Console.WriteLine("\nelige otra opción del menú");
+                elegir = int.Parse(Console.ReadLine());
+              }
+              catch (Exception e)
+              {
+                Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+              }
+
+
+            }
+          }
+          catch (Exception e)
+          {
+
+            Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
+          }
+
+          break;
+
+      }
+
+
+    }
+
+
+
+    //
   }
+
 }
+
 
 
 
