@@ -36,7 +36,7 @@
 // aguila</h1>
 
 /*
-    [6:38 a. m., 26/11/2023] Stiven: crea una clase Ordenador con los siguientes atributos:
+    crea una clase Ordenador con los siguientes atributos:
 
 – tamanio disco (GB)
 – tamanio disco max (GB)

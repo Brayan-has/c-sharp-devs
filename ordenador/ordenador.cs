@@ -1,7 +1,7 @@
 class Ordenador
 {
     // atributos/ 3
-    //tamaño discotamaño máximo disco encendido
+    //tamaño disco, tamaño máximo disco, encendido
     private int _tamañoDisco;
     private float _tamañoMaximoDisco;
     private bool _encendido;
@@ -43,9 +43,6 @@ class Ordenador
         this.tamañoDisco = tamañoDisco;
         // 
         this.tamañoMaximoDisco = tamañoMaximo;
-
-
-        //    Console.WriteLine($"Datos ecenciales de la computadora:\n tamaño del disco: {this.tamañoDisco}\n tamaño total del disco: {this.tamañoMaximoDisco}\n Info extra del ordenador: {info}");
     }
     // eliminarDatos()
     public void eliminarDatos()
@@ -88,7 +85,7 @@ class Ordenador
             
         }
     }
-    // -"ordenador"
+  
 
 
 }
