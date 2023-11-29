@@ -1,0 +1,16 @@
+crea una clase ORDENADOR con los siguientes atributos:
+
+-tamaño disco(GB)
+-tamaño disco max(GB)
+-encendido
+
+los metodos a añadir son:
+
+-añadir datos(int datos): añade informacion al disco duro, si supera el tamaño maximo del disco, el tamaño del disco será el maximo posible, solo si está encendido el ordenador.
+-eliminar datos(int datos): elimina informacion al disco duro, si el tamaño del disco duro es menor que cero, el tamaño del disco duro se quedará a cero. Solo si el ordenador está encendido.
+-encender(): enciende el ordenador.
+-apagar(): apaga el ordenador.
+
+-ordenador
+
+has que sea el usuario quien defina los datos, obviamente a excepcion de de apagar y encender, has uso de un bucle que de inicio a la pc, es decir que sus metodos funciones solo vez que el usuario haya encendido la pc, y que el ususario pueda usar todos los metodos la veces que quiera hata que decida apagar la pc. 
