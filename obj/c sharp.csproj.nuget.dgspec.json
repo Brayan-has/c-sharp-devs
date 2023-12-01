@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stiven\\Desktop\\programación\\c shapr\\c# clases\\c sharp.csproj": {}
+    "C:\\Users\\Administrador\\Desktop\\c sharp desk\\c-sharp-devs\\c sharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stiven\\Desktop\\programación\\c shapr\\c# clases\\c sharp.csproj": {
+    "C:\\Users\\Administrador\\Desktop\\c sharp desk\\c-sharp-devs\\c sharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stiven\\Desktop\\programación\\c shapr\\c# clases\\c sharp.csproj",
+        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\c sharp desk\\c-sharp-devs\\c sharp.csproj",
         "projectName": "c sharp",
-        "projectPath": "C:\\Users\\Stiven\\Desktop\\programación\\c shapr\\c# clases\\c sharp.csproj",
-        "packagesPath": "C:\\Users\\Stiven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stiven\\Desktop\\programación\\c shapr\\c# clases\\obj\\",
+        "projectPath": "C:\\Users\\Administrador\\Desktop\\c sharp desk\\c-sharp-devs\\c sharp.csproj",
+        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrador\\Desktop\\c sharp desk\\c-sharp-devs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Stiven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

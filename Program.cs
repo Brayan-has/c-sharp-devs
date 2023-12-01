@@ -6,15 +6,21 @@ class Progam
   public static void Main(string[] args)
   {
 
-    // 
+    //intancia del objeto ordenador 
     Ordenador pcGamer = new Ordenador();
 
     int elegir = 0;
     int info = 3;
+    int pc = 1;
     // 
+    try
+    {
     Console.WriteLine("Presiona el botón 1 para ver información de la computadora");
-    int pc = int.Parse(Console.ReadLine());
-
+       pc = int.Parse(Console.ReadLine());
+    }catch(Exception e){
+      Console.WriteLine("No puedes ingresar letras ni caracteres");
+    }
+    
     if (pc != 1)
     {
 
@@ -31,7 +37,7 @@ class Progam
 
         case 0:
           Console.WriteLine("elige una opción para poder hacer uso del Ordenador");
-          Console.WriteLine("1: información de la pc.\n2: continuar o apagar ordenador");
+          Console.WriteLine("1: información de la pc.\n2: apagar ordenador");
           Console.WriteLine("3: para modificar los datos del disco\n4: para eliminar todos los datos del disco");
 
           try
