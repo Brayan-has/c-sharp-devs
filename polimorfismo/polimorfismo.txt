@@ -1,0 +1,16 @@
+program{
+    Caminar ser = new Caminar();
+
+    ser.distancia = 5;
+    ser.pasosPorM = 4;
+    ser.caminar();
+    // clase humano
+    Console.WriteLine("");
+
+    Humano juan = new Humano();
+
+    juan.caminar();
+
+    juan.correr();
+
+}

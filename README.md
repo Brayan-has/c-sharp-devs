@@ -55,3 +55,9 @@ Los metodos a añadir son:
 [6:39 a. m., 26/11/2023] Stiven: por cierto, los atributos deben tener método get y metodo set, cada uno de ellos
     
     */
+
+
+    /*
+    crear dos clases una 
+    
+    */
