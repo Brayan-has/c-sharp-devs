@@ -1,0 +1,1434 @@
+
+1# . creo la instancia para correr el programa: dotnet new console.
+
+2#.  correr el codigo instanciado: dotnet run
+
+3#. en caso de que alguna otra instancia de problemas usar dotnet new console --force
+
+
+secuencias de escape: \n \t 
+
+subsring: cadena basado en posicion inicial especificada en numero
+
+
+
+
+								ESTRUCTURA BÁSICA:
+
+
+Estructura o forma con la que se debe comenzar un proyecto de c sharp
+
+
+using System;
+
+
+Class Program
+{
+	Static void Main(string[] args){
+		 
+		
+		//aquí nuestro código
+
+	}
+
+}
+
+
+
+
+
+
+								CONTROL DE ERROERS:
+
+Con try catch podremos capturar aquellos errores (EXCEPTION) que detienen por completo nuestros programas y evitar que toda la app o web se detenga.
+Con try pondríamos aquel código que queremos que se ejecute y que sabemos o esperaríamos una posible exception
+y final mente con el catch atraparíamos esa posible exception y mostrando un mensaje de error o de no fue posible realizar la acción en vez de la exception en sí, evitando la detención del programa/web/app.
+
+
+
+
+
+ 	try
+        {
+           int  resultado = numero + int.Parse(var);
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine("no fue posible lo deseado");
+        }
+        finally
+        {
+            Console.WriteLine("esto se ejecutará siempre sin importar si el try es true o false");
+            
+        }
+
+
+
+								TIPOS DE COMENTARIOS:
+
+
+
+1#. // dentro de estas barras se considera comentarios 
+
+2#. 	/* dentro de esta estructura 
+
+		se considera bloque de comentarios
+
+	*/ 
+
+
+
+
+
+
+								TIPOS DE DATOS BÁSICOS Y AVANZADOS:
+
+
+BÁSICOS:
+
+1#.  numericos: int(enteros), double(real), decimal(real se debe poner una m al final de el elemento), float(real con mas valores)
+dato(el float al final del dato se tiene que poder una f(float flotante = 123f;))
+
+.int numero = 12;
+.double numero = 12.3;
+.decimal numero = 12.3m;
+.float numero = 12.3f;
+La diferencia entre los tres tipos de datos real es su tamaño en cuestion de decimales.
+
+2#. caracter: String(se ponen entre comillas ya sea dobles o simples)
+
+.string nombre = "Brayan";
+
+3#. bool: boolean, bool(tipo de dato lógico, el cual solo tiene dos consideraciones: true y false/ verdadero y falso)
+
+.bool tieneCelular = true;
+.bool tienePareja = false;
+
+AVANZADOS:
+
+
+1#. numericos: long, short: el long permite valores númericos muy grandes y el short muy pequeños valorados en byts 4 números.
+
+.long cantidadEstrellas 1000000000; :v
+.short cantidad = 2344;
+
+2#. caracter: char: solo permite una sola letra o un solo caracter.
+
+char abreviatura = "a";
+
+
+
+
+								
+
+      								  OPERADORES LÓGICOS:
+
+Operadores con los que podremos condicionar y o validar información relevante
+
+ Ejemplo: 2 == 2; // dos es igual a dos?
+
+
+
+        /*
+            < > mayor y menor que
+            <= >= menor e mayor igual que
+            == igual que
+            != diferente de
+            
+            							SENTENCIAS LÓGICAS:
+
+
+Con estas sentencias lógicas podemos validar más información al mismo tiempo
+Ejemplo:
+
+.O lógico ||: 2 es mayor que 3? || 2 es igual a 3?
+.Y lógico &&: 2 es igual a 2 && 3 es igual a 3.
+.Negación !:  if(! 2==2){código} // 2 más 2 no es verdad/ 2 más 2 no es true.
+
+            O (||)
+            and (&/&&)
+            not (!) negación o invierte la sentencia
+           
+        */
+   
+
+
+
+
+
+								ESTRUCTURAS DE CONTROL
+
+								CONDICIONAL IF:
+CONDICIONAL IF:
+
+Con estas condicionales podemos condicionar información para filtrar los y o manejar la información de manera controlada y guiada a combeniencia
+
+Ejemplo:
+
+if(condicionLogica)//basico
+        {
+
+        }
+        else if (condicionlogica) con else if podemos validar muchas otras opciones al mismo tiempo que validamos al principal if.
+        {
+
+        }
+        else{ // el ese índica que en caso de las condiciones del if y el else if no se cumplen realizará lo el código que tenga este (else) dentro.
+
+        }
+
+if(2 < 3){Console.WriteLine("2 es menor")}  //validando si 2 menor 3 es cierto, de ser lo mostrar en la consola un mensaje que dice 2 es menor, de lo contrario no realizar ninguna acción.
+				
+        
+CONDICIONAL SWITCH:
+
+Nos sirve para validar si una variable contiene algún elemento, puede ser un string, int, incluso bool. Si alguno de los casos se cumple entrará en en el (CASE) y ejecutará el código. Funciona exactamente (CASI EXACTAMENTE) igual que el condicional if.
+
+int numero = int.Parse(Console.WriteLine());
+switch(numero){
+
+	case 1:
+		//código;
+		break; 
+	case 2:
+		//código;
+		break;
+	default:
+		//código;
+		break;
+}
+
+          
+Ejemplo:
+
+int numero = int.Parse(Console.WriteLine());
+switch(numero){
+
+	case 1:
+		Console.WriteLine("hola mundo");
+		break; // el break índica que  aquí el código final mente ha terminado.
+	case 2:
+		Console.WriteLine("adios mundo");
+		break;
+	default:
+		Console.WriteLine("el número ingresado no coinciden con las opciones");
+		break;
+}
+
+Estamos validado si el número ingresado por el usuario es 1 mostrar en la consola un mensaje que diga  hola mundo, y en caso de que el número ingresado sea 2 mostrar otro mensaje en la consola que diga adios mundo, el default indica que en caso de no cumplirse la condición o en caso de que el número ingresado por el usuario sea diferente a 1 y 2 mostrará en la consola otro mensaje que dice el número ingresado no coincide con las opciones.
+
+
+
+
+          tarea con condicional:
+
+          Crear tres variables con valores distintos 
+          y condicionar cúal de los 3 es mayor y cúal de los 3 es menor 
+          y  cúal es igual a algún otro número de las variables.
+        */
+
+
+
+
+								Bucles
+
+. Tienen como caracteristica realizar tareas en loop o bucle una cantidad finita de veces o incluso infinita
+
+
+Tenemos varios de estos: 
+
+.1# FOR: el bucle for es un bucle que se repite un número finito (indicado) de veces, este contiene su propia variable la cual a su vez es un contador(VARIABLE QUE AUMENTARÁ DE VALOR).
+
+for(int i = 0; i <= 10; i++){
+
+	//código aquí. El código se repetirá 11 veces.
+}
+
+.2# WHILE: El bucle while o en español mientras también se petite un número infinito de veces, como desarrolladores toca crear aparte un contador para validar que vaya  hasta que contador sea igual al número de veces que queramos que se repita el bucle.
+
+while(contador <= 10){
+
+	contador ++; //quí el contador aumenta de valor en cada vuelta del bucle cuando este llegue a 10 el bucle se detendrá
+
+	//tenemos otras formas de aumentear le valor del contador
+	// contador = contador +1;
+	// contador += 1; cualquiera de estas formas es correcta
+	//código aquí. 
+
+}
+
+
+.3# DO WHILE: El do while funciona exactamente igual que el bucle while, con la pequeña diferencia en que este entrará en el bucle almenos una vez, es decir aún que el la condición sea falsa este ejecutará el código dentro una vez, si es true o cierta entonces si funcionará igual al while, al igual que el bucle while este también requiere de un contador externo.
+
+do{
+
+	contador += 1;
+}while(contador <= 10);
+
+
+.4# FOREACH: El for each o en español (para cada) es un bucle que va en conjunto con los arrays o arreglos ya sean vectores o matrices, o también con las listas en general va con estas estructuras.
+
+foreach(int i in array){
+
+	//código aquí.  Este funciona igual que el for pero únicamente se usa además de la variable interna la palabra reservada in.
+}
+
+					tarea:
+
+ //mostrar los números del 1 al 29
+
+        //mientras o para hacer mientras 
+
+        //1# para
+
+        // for (int i=0; i<=20; i++)
+        // {
+
+        //     Console.WriteLine($"numero: {i}");
+
+        // }
+
+        //2# mientras
+
+        int num=1;
+
+        // while (num >= 0 && num < 20)
+        // {
+        //     num += 1;
+        //     Console.WriteLine($"numero: {num}");
+        // }
+
+        //3# do while
+
+        do {
+            Console.WriteLine($"numero: {num}");
+            num += 1;
+
+        }while(num>=1 && num <=20);
+
+    }
+
+
+					tarea
+
+
+ //tabla de mult 2 con ciclo for y la tabla del 3 con ciclo while
+        //y la del 5 con el do while
+
+        /* int tabla2 = 2;
+
+        for (int i=1; i<=10; i++)
+        {
+            
+            Console.WriteLine($"{tabla2} X {i} = {tabla2*i}" );
+        }*/
+
+       /* int tabla3 = 3;
+        int contador = 1;
+
+        while (contador<=10)
+        {       Console.WriteLine($"{tabla3} X {contador} = {tabla3*contador}");
+                contador = contador +1;
+        }*/
+
+        int tabla5 = 5;
+        int contador = 1;
+
+        do{
+            contador += 1;
+            Console.WriteLine($"{tabla5} X {contador} = {tabla5*contador}");
+        }while(contador<=9);
+      
+        
+        tarea 2#:  int tabla1 = 1;
+  
+    
+    for (int i=1; i<=9; i++)
+    {
+      for(tabla1=1; tabla1<=10; tabla1++)
+      {
+        
+      Console.WriteLine($"{i} X {tabla1} = {tabla1*i}");
+      if (tabla1==10) {Console.WriteLine();}
+
+      }
+      
+    }
+
+
+	TAREA 3# números impares y números pares
+
+  int impar = 1;
+    
+
+    for ( impar=0; impar<=10; impar++)
+    {
+      if (impar != 0)
+      {
+        Console.WriteLine(impar + " es un número impar Bv");
+      }
+    }
+   
+
+	
+
+			
+	
+	
+	
+										foreach:
+
+
+
+ //bucles #4: for each
+    
+        // listas,array,matrices,listas-genericas
+
+        // sintaxis
+
+        // int[] numero = new int[]{1,2,3,4,5,6,7,8,9,10}; 
+
+        // foreach (int variable in numero)
+        // {
+
+        //     Console.WriteLine(numero);
+
+        // }
+        
+    
+
+
+
+
+
+										FUNCIONES:
+
+
+Las funciones son una forma de "automatizar" tareas en código o reutilizar bloques de código con fines especificos sin necesidad de volver a codificar los, generalmente se usan cuando se tiene que usar un código muchas veces... Y su sintaxis es la siguiente:
+
+
+        /*  
+            se debe crear fuera del metodo main(principal)
+            el nombre de la función debe comenzar en mayúscula(pascal case)
+            a diferencia de otros lenguajes las funciones aquí no se usan con
+            palabras reservadas como function u otros,
+            pero sabemos que son funciones por que llevan ciertas palabras
+            reservadas "void para sin retorno" o "return para con retorno" 
+            tambien por que nos pide un tipo de dato a retornar.
+
+            Las funciones solo se usan para tareas repetitivas, evita que codifique 
+            muchas veces un código especifico
+
+        */
+
+
+ //sintaxis        
+
+    //sin retorno
+
+    //    public static void Mensaje()
+    //    {
+
+    //     	Console.WriteLine("hola mundo");
+
+
+    //    }
+
+
+
+
+
+	llamada sin retorno:  Mensaje();
+
+
+
+
+//con retorno
+
+    //funcion con retorno
+
+    // public static string Mensaje()
+    // {
+    //     return "hola a todos";
+    // } 
+
+
+
+	llamada con retorno: Console.WriteLine(Mensaje()); 
+
+
+
+
+
+//funciones  con parametros
+
+        /*tiene como caracteristica obligar  al desarrollador a ingresar los datos como argumento en la llamada de la función para poder trabajar con esos datos*/
+
+        //Mensaje("hola mundo"); aquí se llama a una función llamada Mensaje y se le pone como argumento un string que dice "hola mundo".
+
+        
+
+        suma(3,4);
+
+        
+
+    }
+
+    //sintaxis
+    /*public static void Mensaje(string mensaje)
+    {
+        Console.WriteLine(mensaje);
+    }*/
+
+
+
+								tareas:
+
+
+public static void Numeros()
+    {
+        int numero = 1;
+        
+        
+        for ( numero=1; numero<=10; numero++)
+        {
+            if (numero % 2 == 0)
+            {
+                Console.WriteLine($"{numero} es par");
+                Console.WriteLine(" ");
+            }
+            else if (numero % 2 == 1)
+            {
+                Console.WriteLine($"{numero} es impar");
+                Console.WriteLine(" ");
+            }
+        }
+
+    }
+
+								
+
+
+2# :  //tarea hacer una función que sume dos numeros, pedir los numeros por parametro
+
+    public static void suma(int numero1, int numero2 )
+    {
+        Console.WriteLine(numero1);
+        Console.WriteLine(numero2);
+
+        int resultado = numero1 + numero2;
+        Console.WriteLine(resultado);
+    }
+
+
+
+	con retorno:
+
+
+
+//crear una función con retorno 
+            // que calcule el salario de una persona 
+
+
+        Console.WriteLine(Salario());
+
+    }
+    
+    // 1 Funcion(retorno)
+    // 2 para calcular: valorHora, horasTrabajadas,Salario
+
+    public static double Salario()
+    {
+        float valorHora = 3500f;
+
+        Console.WriteLine("Ingrese las horas laboradas");
+
+        int horasTrabajadas = int.Parse(Console.ReadLine());
+
+        double salario = (valorHora * horasTrabajadas)*30;
+
+        return salario;
+    }
+
+
+colcular fecha de nacimiento: 
+
+using System;
+
+namespace CalculoDeLaEdad
+{
+    class CalculoDeLaEdad
+    {
+        static void Main(string[] args)
+        {
+            int anno_actual, anno_de_nacimiento, dia_actual, dia_de_nacimiento, edad;
+            int mes_actual, mes_de_nacimiento;
+            Console.Write("Ingresa el valor de anno actual: ");
+            anno_actual = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa el valor de anno de nacimiento: ");
+            anno_de_nacimiento = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa el valor de dia actual: ");
+            dia_actual = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa el valor de dia de nacimiento: ");
+            dia_de_nacimiento = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa el valor de mes actual: ");
+            mes_actual = int.Parse(Console.ReadLine());
+            Console.Write("Ingresa el valor de mes de nacimiento: ");
+            mes_de_nacimiento = int.Parse(Console.ReadLine());
+            edad=anno_actual-anno_de_nacimiento;
+            if(mes_de_nacimiento>mes_actual||(mes_de_nacimiento==mes_actual&&dia_de_nacimiento>dia_actual))
+                edad=edad-1;
+            Console.WriteLine("Valor de edad: " + edad);
+            Console.WriteLine();
+            Console.Write("Presiona una tecla para terminar . . . ");
+            Console.ReadKey();
+        }
+    }
+}
+
+					
+
+
+
+using System;
+
+namespace Index{
+
+
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+
+        // 2. realizar una funcion que pregunte
+        //  la edad, nombre, apellido y devulve
+        //  un mensaje con estos valores.
+
+        Console.WriteLine(Datos());
+
+    }
+
+    //retornará un string
+    public static string  Datos()
+    {
+        // variables
+        int edad = int.Parse(Console.ReadLine());
+        string nombre = Console.ReadLine();
+        string apellido = Console.ReadLine();
+
+        // retorno
+
+        return $"La edad es: {edad.ToString()}\nEl nombre es: {nombre}\nEl apellido es: {apellido}";
+        
+    }
+
+}
+}
+
+
+
+    // public static  void Enteros(decimal numero)
+    // {
+    //     int numero1 = Convert.ToInt32(numero);
+    //     Console.WriteLine($"Este es {numero } {numero.GetType()} convertido a entero: "+ numero1 +" "+ numero1.GetType());
+        
+    // }
+
+
+            //int[] nombreArray = new int[];
+                //int[] nombreArray = new int[] {values}
+
+    // 1. creo la funcion
+
+    // public static void MayorMenor()
+    // {
+        //creo el arreglo con sus datos
+
+        
+
+    //     int[] mayor = new int[3] {3 , 4, 9 };
+
+        
+    
+    //     if (mayor[0] > mayor[1] & mayor[0] > mayor[2] )
+    //     {
+    //         Console.WriteLine($"la primer posicion del arreglo ({mayor[0]}) es mayor");
+    //     }
+    //     else if (mayor[1] > mayor[0] & mayor[1] > mayor[2] )
+    //     {
+    //         Console.WriteLine($"la segunda posicion del arreglo ({mayor[1]}) es mayor");
+    //     }
+    //     else if (mayor[2] > mayor[0] & mayor[2] > mayor[1] )
+    //     {
+    //         Console.WriteLine($"la tercer posicion del arreglo ({mayor[2]}) es mayor");
+    //     }
+
+   
+    // }
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									PARSEOS:
+
+			
+
+						 //parseo, conversiones, funcion de parseo(super class)
+
+.Los parseos son una forma de cambiar el tipo de dato de una variable para poder operar los con otras variables, por ejemplo si queremos operar enteros con datos de tipo double o decimal sería posible con los parseos, y sus sisntexis se pueden hacer de la siguiente manera:
+        
+        
+
+        /*    (parse)paseos generales:
+        
+        int numero = Int32.Parse(Console.ReadLine()); Analiza la lo que el usuario ingrese a tipo de dato intero con un tamaño en bytes de 32
+        double real = double.Parse(Console.ReadLine());
+        decimal real2 = decimal.Parse(Console.ReadLine());
+        float realExtenso = float.Parse(Console.ReadLine());
+
+        */
+        
+        
+        /* //(Convert) Conversiones:
+
+            int numero = Convert.ToInt32(Console.ReadLine()); Convierte lo que el usuario ingrese a tipo de dato entero 
+            double real = Convert.ToDouble(Console.ReadLine());
+            decimal real2 = Convert.ToDecimal(Console.ReadLine());
+            float realextenso = Convert.ToSingle(Console.ReadLine());
+        */
+
+        /*(funcion de parseo)
+
+
+        int numero = 23;
+        numero.ToString(); Pasa el contenido de una variable a el tipo de dato String
+
+        double real = 23.55;
+        real.ToString();
+
+        */
+
+
+
+									EXCEPCIONES:
+
+
+
+
+
+. Una excepción es un tipo de error especifico un error que generalmente tiene una descripción especifica por la cual se puede buscar solución gracias a esa descripción, pero estos errores detienen el flujo de ejecución de nuestros programas, para evitar los usamos try catch de la siguiente manera:
+
+
+//EXCEPECION:
+
+        /*Try-catch*/
+
+
+        try
+        {
+        
+            int numero = int.Parse(Console.ReadLine());
+            Console.WriteLine("este es el número " + numero);
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine("no fue posible el cometido");
+        }
+
+
+Evitando que la excepción interrumpa el flujo de ejecución del programa
+
+
+
+
+
+
+
+									ARRAYS
+
+
+
+Los arrays son básicamente listas en las cuales podemos almacenar le valores de cualquier tipo de datos
+tenemos 2 tipos de arrays, los vectores son los valores en horizontal y las matrices son los valores que almacenados son tnto horizontal como vertical. Los arrays cuentan sus elementos en indices es decir que cuenta númericamente cada elemento dentro de si contanto desde cero hasta su último elemento.
+
+Sintaxis vectores:
+
+VECTORES:
+
+primero va el tipo de dato int, string, decimal etc, luego se abre y se cierra corechetes [] indicando que se tratará de un array, seguido el nombre y con el igual de asignación usaremos la palabra reservada new más una vez más el tipo de dato y apertura y cierre de corchetes y dentro de estos la cantidad de valores que puede almacenar 
+
+int[] numero = new int[10];
+
+para almacenar le datos podemos hacer lo de 2 formas 
+
+.1#: en cada indice de la siguiente forma array[indice] = elemento a agregar o valor a agregar.
+
+array[0] = "Juan";
+
+.2#: haciendo uso de un bucle podemos agregar de manera autonoma es decir pidiendo al usuario que elementos agregar.
+
+for(int i = 0; i <= array.Lenght -1){
+
+	string nombre = Console.ReadLine();
+	array[i] = nombre;
+
+}
+
+
+MATRICES:
+
+
+sintasis:
+
+int[,] cedulas = new int[3,3];
+
+Al igual que con los vectores se pueden acceder o ingresar valores por medio de sus indices aunque ahora se tendría que tener en cuenta filas y columnas, lo cual al principio parece bastante confuso pero con la practica se llegará a entender bastante bien.
+
+cedula[0,0] // aquí nos mostrará el primer elemento de la primera fila en la primer columna.
+
+Igual a los vectores podemos acceder a sus elementos por medio de bucle pero esta vez toca anidar le otro bucle:
+
+
+RECORRER: 
+
+for(int i =0; i<=10; i++){
+
+
+	for(int j =0; j<=10; j++){
+
+
+		Console.WriteLine(matriz[i,j]) // aquí mostramos todos los elementos de la matriz donde i pertenece a la columnas, y j filas
+
+	}
+
+
+}
+
+
+
+
+
+								POO 
+
+
+
+Poo siglas de Programación Orientada a Objetos referente a una forma de crear y usar código diseñado para imitar la vida diaria o la vida real como por ejemplo la opservación de las caracteristicas principales o importantes o indispensables de los objetos(altura,color,tamaño etc) y sus funcionalidades (avanzar,girar,cortar etc)
+gracias a esa observación conocemos hoy la progrmación orientada a objetos con terminos como clases, campos de clase, constructor,destructor,métodos de clase etc.
+
+
+
+								CLASE:
+
+
+
+Las clases son una especie de plano que nos permite crear un objetos con las caracteristicas y capacidad (funciones) que le indiquemos la "mejor" forma de entender como funciona veamos las clases como una gran carpa de donde hay una maquina capaz de construir objetos, y esta maquina resultaría siendo todos los elementos especialmente el constructor. Otra forma de ver la clase sería los planos para construir objetos complejos, las clases sería el folio donde se dibujará los planos.(DE NO PODER ENTENDER ESTA PARTE INVESTIGAR FORMAS MÁS FÁCILES O MEJOR COMPRENCIBLES PAR USTEDES MISMOS).
+ejemplo:
+
+class NombreDeClase{
+
+//código aquí.
+
+
+}
+
+
+
+
+
+
+								CAMPOS DE CLASE O ATRIBUTOS DE CLASE Y MODIFICADORES DE ACCESO:
+
+
+Ahora que entendemos o vemos la clase como el folio o el papel donde dibujaremos los planos procederemos a dibunar sobre ese folio los planos para crear un objeto y el primer paso para esto es la creación y uso de los campos de clase, estos son básicamente variables pero que representan  las caracteristicas de un objeto en la clase
+se le conoce más como atributo por que hace referencia a los atributos o caracteristicas que tienen los objetos y básicamente todo en la vida real, caracteristicas o atributos como los colores, tamaño en medidas, velocidad, o algún elemento importante con el que se harán calculos más adelante en la clase.
+
+Estas a su vez 
+estan compuestos o acompañados por modificadores de acceso o como se conoce más comúnmente como encapsulamiento, en donde se evitará o permitir que un campo de clase sea visible desde otra clase.
+Existen 4 tipos diferentes pero los que nos importa por ahora son solo 2 private y public siendo private el encapsulado que evita que el campo de clase o elemento sea visible desde otra clase, public es el inverso de private donde estará el campo o elemento publico para otras clases, pero por convención se suele dejar los campos de clases por defecto en private
+Ejemplo:
+
+class Video{
+
+	private int duracion;
+	private string calidad;
+
+	public Video(){
+		
+	    duracion = 5;
+	    calidad = "HD";
+
+	}
+
+}
+
+
+
+
+
+								CONTRUCTOR 
+
+El constructor es otro elemento muy importante para dibujar y completar nuestro plano para crear objetos, tiene como función comunicarse con los campos de las clases tanto para dar le valores por defecto o pedir esos datos o valores como parametro en la intancia del objeto al desarrollador o al usuario.
+
+Se compone del nombre de la clase más el modificador de acceso public y apertura y cierre de parentesis similar a una función
+ejemeplo:
+
+
+//tenemos una clase llamada Carro
+
+public Carro(){
+
+//aquí se iniciarían los campos de clase	
+
+} 
+
+
+
+
+								USO DE THIS:
+
+This es una palabra reservada que al usar la nos indica que nos referimos especificamente a la clase donde la estamos usando, se suele usar especialmente para los campos de clase donde almacenariamos valores a un campo de clase especifico y para diferenciar de campo de clase de un parametro usamos this en el campo de clase al que le estamos almacenando valores 
+ejemplo:
+
+class Carro{
+
+   public string marca;
+   public int cantidadRuedas;
+
+   public Carro(string marca,int cantidadRuedas){
+
+   		this.marca = marca;
+		this.cantidadRuedas;
+
+	}
+
+
+}
+
+
+
+								MÉTODOS DE CLASE:
+
+Los métodos de clase son una parte importante en nuestro plano para crear un objeto, diría que es el más importante aúnque en si todo es importante para nuestros propositos, estoes tienen como caracterisitica índicar cual va a ser la "capacidad" del objeto o cual será su función, por ejemplo tenemos una clase que nos permite crear objetos de tipo vehículo, los cuales tienen como (función) o funciones avanzar,frenar,girar,retroceder,modular velocidad etc. 
+Ejemeplo:
+
+class Vehiculo{
+
+//campo de clase
+private int numeroRuedas;
+private string color;
+
+//métodos de clase
+	public void Avanzar(){
+	
+
+		Console.WriteLine("Avanzo de cero hasta un máximo de 300 k/h ");		
+
+	}
+
+
+} 
+
+
+
+
+
+
+								SOBRE CARGA DE MÉTODOS:
+
+
+
+Las sobre cargas de métodos son una forma de pedir le al usuario/desarrollador más parámetros o diferentes parámetros en un método, se hace con el proposito de tener distinas posibilidades para un método, es decir un método que se pueda usar de muchas formas diferentes pidiendo más valores en el parámetro. 
+La forma de hacer esto es duplicar el método que se desea sobre cargar esta replica se escribe exactamente igual al método original con la única diferencia de que en el parámetro será diferente al método original, ya sea pidiendo diferentes parámetros,no pedir ninguno o pedir uno o varios parámetros más adicionalmente a los originales del método original.
+
+La sintaxis para una sobre carga de método es la siguiente:
+
+//método original
+public void Persona(){
+	
+Console.WriteLine("soy una persona");
+
+}
+
+//método, sobre carga numero uno
+public void Persona(string nombre){
+
+
+Console.WriteLine($"Soy una persona de nombre ${nombre}");
+
+}
+
+//método, sobre carga numero 2
+public void Persona(string nombre,string apellido,int edad){
+
+Console.WriteLine($"Soy una persona de nombre ${nombre} con el apellido de ${apellido} de edad ${edad.toString()}");
+
+}
+
+
+
+
+								MÉTODOS LAMBDA:
+
+
+
+
+Los métodos lambdas son métodos los cuales necesitan únicamente una sola linea de código, es decir en el método donde su único valor sea un return de una unica linea de código o una linea de código en general sin importar si el es de tipo return o void. Y esto se hace remplazando la apertura y cierre de llaves ( "{}" ) por el simbolo lambda el cual se conforma de un signo igual más el signo de mayor que ("=>").
+
+La sintaxis básica de los método lambdas es:
+
+//Este es un método de tipo return 
+public string Mensaje() => return "hola mundo";
+
+//Este es un método de tipo void
+public void TuNombre() => Console.WriteLine($"Tú nombre es: ${this.nombre}") 
+
+
+
+
+
+
+								CLASES REMOTAS/CÓDIGO REMOTO
+
+Las clases remotas o código remoto es una forma de organizar tú código para ser más fácil de solucionar problemas y además para ser más legible.
+Consiste en crear distinas carpetas en las cuales vamos a crear en cada una un archivo de c# que contendrá el código de cada clase, estás deben estar dentro del mismo archivo en donde se aloja el proyecto principal, es decir donde se encuentra el clasico Program.cs más sus archivos en general. De está forma podemos tener nuestro método Main libre de código extra y será mucho más fácil de leer, además claro de que si obtenemos una excepción en alguna de las clases, evitarémos buscar aquella excepción en mil lineas de código hacía abajo en el método main, si no que buscamos el archivo donde se aloja el error y podrémos solucionar o identificar sus problemas de un solo vistazo.
+
+		
+
+
+	
+
+
+								MÉTODOS GET Y SET/GETTER Y SETTER:
+
+
+
+Los método get y set o como tambien se les conoce getter y setter son métodos que tienen el proposito de poder acceder y... O ingresar valores a un atrubo de clase, de esta forma se podrá visualizar y reasignar el contenido de un atributo de una clase. Estos son independiente uno del otro pero por lo general suelen estar juntos, recordemos que los atributos por lo general se declaran en private, con los métodos get y set obligamos o creamos una forma de acceder a los valores de los atributos sin tener acceso total a los atributos en sí.
+para entender bien que son los get y set debemos o podemos traducir su forma del verbo del ingles al español. Donde "GET" significaría obtener/tener y "SET" significaría poner/ingresar.
+
+Hay 3 formas diferentes de generar o crear un método get y set,  y cada una de esas son validas pero no se usarán todas en todas las circunstantcias 
+
+
+1#_Primero:
+
+La primera forma de hacer esto es la forma que se usa cuando no se conoce bien o no se entiende al 100% las demas, el cual consiste en imitar las acciones que hacen los métodos get y set por medio de los método comunes, donde las acciones del get se imitarían con un método de clase de tipo RETURN y el set con un método de tipo VOID y su sintaxis sería la siguiente:
+
+
+RETURN/GET: 
+//MODIFICADOR DE ACCESO + EL TIPO DE DATO A DEVOLER + EL NOMBRE DEL MÉTODO + () + LLAVE ( {} ) O LAMBDA (=>) + RETURN + EL ATRUBUTO DE LA CLASE.
+
+public string nombreCompleto() => return this._nombreCompleto; //con get obtendríamos el valor del atributo privado
+
+//generalmente los nombres de los métodos se suele escribir igual que el nombre del atributo con el sistema Pascal case, para diferenciar una de la otra, pero la forma que se considera más práctica es escribir un guion bajo antes de la primera letra del nombre del atributo para así escribir el método con el mismo nombre del atributo sin ser problematico con el atributo (_nombreDeAtributo). Este sistema con el guion bajo únicamente se usará para aquellos atrubutos que sabemos que necesitaremoms un método get y un método set, con la primera forma (la de imitar el comportamiento del getter y setter)
+
+VOID/SET:
+
+public void nombreCompleto(string nombreCompleto) => this._nombreCompleto = nombreCompleto; //con set podrémos reasignar o cambiar el valor de un atributo privado
+
+
+
+2#_Segunda:
+
+La segunda forma de usar un método get y set resulta ser un poco más fácil que la primera, puesto que en esta solo necesitarías crear un solo método que abarca ambas palabras reservadas, esta es la forma que se considera más eficiente y es la que se debería de usar en la gran mayoría de veces, esta forma se usará en todos los casos, pero claro más en aquellos casos donde el atributo será o sea private.
+
+Esta conciste en duplicar el atributo pero con el modificador de acceso o el encapsulamiento en public al igual que la forma anterior su nombre tendrá pequeñas variaciones pero procurando que tengan el mismo nombre, aquí generalmente se usa la "regla" del guion bajo donde el atributo original tendrá el guion bajo antes de la primera letra de la palabra que la conforma, pero el duplicado o la copia no tendrá este guion bajo para identificar lo como el original definitivo... Una vez echo esto se abrira y se cerrará llaves {} y en su interior llevara las palabras reservadas get y set en lineas de códgio separadas. Donde la linea del get comenzaría con la palabra reservada get más apertura y cierre de llaves {} y en su interior lleva un return más el atributo de clase, en la otra linea de código se escribe la palabra reservada set más apertura y cierre de llaves {} y en su interior se escribe el nombre del atributo de clase más el igual de asignación = más la palabra reservada VALUE que significa "valor" del ingles.
+
+Su sintaxis sería la siguiente:
+
+private string _nombreCompleto; //atributo original con el guion bajo
+
+//método get y set definitivo
+
+public string nombreCompleto{ 
+
+	get { return this._nombreCompleto;}
+	set { this._nombreCompleto = value;}
+}
+
+
+
+
+3#_Tercera:
+
+Por último la tercera forma de usar un método get y set/getter y setter es en la misma linea de código donde se ha creado un atributo de clase, esta forma se usa únicamente cuando el atrubuto lleva el modificador de acceso o el encapsulamiento en public (aunque esta afirmación aún me tiene con dudas) al igual que las de más formas tiene el mismo proposito, obtener y o poner o ingresar valores al atributo de clase, y como sería la sintaxis:
+
+en la misma linea donde se crea el atributo en vez de cerrar la linea con punto y coma se abre y se cierra llaves {} y en su interior llevaría las palabras reservadas get y set separadas por punto y coma. Y en primeras esta sería la única sintaxis... Siendo esta la forma más fácil en comparación de las demas.
+
+
+//atributo original
+
+public string nombreCompleto { get;set; } //la forma más fácil, pero solo se usa aparentemente cuando el atributo está en public
+
+
+
+post data:  Tengo entendido que existen otras formas de usar un método get y set pero no hay necesidad de su uso, hasta ahora estas 3 formas serían las que más nos interesa y nos sirven perfectamente bien sin conflictos por sintaxis ni nada por el estilo.
+	
+
+
+
+
+
+								CLASES ANONIMAS 
+
+
+Las clases anónimas son clases que no poseen nombre, estás clases no poseen métodos ni constructor pero si poseen atributos los cuales se inicializan en la misma linea donde se crea o inicializa la clase anónima. Estas se crean en la misma intancia del futuro objeto, de manera interna las clases anónimas ya vienen con "nombres" por defecto provenientes de la clase Object (para saber sobre object visitar la documentación oficial sobre Object:https://learn.microsoft.com/es-es/dotnet/api/system.object?view=net-7.0) pero no están explícitos, estos se dan por el compilador al darse cuenta de ciertas reglas (para entender esto lo cual no es necesario, visitar la documentación oficial de Tipos anónimos: https://learn.microsoft.com/es-es/dotnet/csharp/fundamentals/types/anonymous-types).
+
+Su sintaxis es la siguiente:
+
+--- var v = new { Amount = 108, Message = "Hello" };
+
+--- var empleado = new {nombre = "Juan", apellido = "guarnizo"}; // :v
+
+--- var v = new mostrar(); //no estoy seguro de que está sintaxis sea correcta
+
+Para comenzar al no existir nombre de la clase sustituimos donde iría el nombre de la clase por un tipo de dato indefinido (VAR) el cual cumple como proposito dar le el trabajo al compilador de identificar que tipo de dato es la variable o en este caso el objeto, seguido del nombre del objeto seguido el signo de asignación y comenzamos la clase anónima con la palabra reservada (new) indicando que se trata de un objeto de clase, seguido esto abrimos y cerramos llaves ( { } ) y dentro de estos iría los atrubutos con sus repectivos valores.
+
+¿¿Cual sería el proposito de esto?? en algun momento necesitaremos hacer uso de ellas por cuestiones de fácilidad, según chat gpt:  Son útiles en situaciones donde necesitas estructuras de datos temporales y simples, generalmente dentro del ámbito de una función o método
+
+
+
+- chat gpt:
+
+Pasar datos a vistas en ASP.NET MVC: Cuando trabajas con el marco de trabajo ASP.NET MVC, a menudo pasas objetos de datos a las vistas. Las clases anónimas pueden ser útiles para dar forma a los datos que se mostrarán en una vista específica.
+
+Proyecciones en consultas LINQ: Cuando estás realizando consultas LINQ (linq es una forma de realizar consulta a datos muy similar a como lo hacemos en las bases de datos) a colecciones de datos y necesitas seleccionar un subconjunto de propiedades o transformar los datos en una forma específica, las clases anónimas son muy útiles.
+
+								ARRAYS Y LISTAS
+
+
+
+
+
+
+								HERENCIA
+
+
+La herencia como su nombre indica nos da la posibilidad de heredar atributos y métodos desde una clase padre o principal a una sub clase o clase hija, para entender como funciona la herencia debemos realizar "verbalmente" dos preguntas:
+
+1: ¿es un? comparando las clases entre si, sí son compatibles entonces podrán heredarse 
+ejemplo : tenemos una clase perro y una clase animal,
+
+. ¿Es un perro un animal? como la respuesta es si, dando a entender que coinciden entonces es posible heredar de la clase animal para la sub clase perro
+
+2: similar a la primera forma preguntamos está clase pertenece a? una vez más comparando a las clases 
+ejemplo: tenemos una subclase llamada Humano y la clase Mamifero
+
+.¿Pertenece un Humano a un Mamifero o pertenece a los mamifero, en este caso la respuesta es positiva por lo que debería de ser posible la herencia.
+
+
+Estás formas son muy buenas para plantear la herencia antes de intentar lo en código lo cual resulta fácilitando la tarea de generar una herencia compleja.
+
+Pero... ¿Cómo sabemos cúal clase es la principal y cúal es la sub clase? Sencillo... Podemos diferenciar  de la clase padre de la subclase cuando vemos que de la clase padre están heredando varias clases las cuales a su vez están siendo conectadas por está herencia.
+
+La sintaxis de la Herencia es la siguiente:
+
+
+
+// clase padre
+
+
+class Mamifero{
+
+//contenido de la clase
+
+}
+
+
+// sub clase
+
+class Humano{
+
+//contenido de la clase
+
+}
+
+
+para que Humano herede de la clase Mamifero agregamos en seguida del nombre de la sub clase (Humano) dos puntos ( : ) y seguido de esto el nombre de la clase padre (Mamifero)
+
+
+class Humano : Mamifero{
+
+
+// contenido de la clase
+
+}
+
+Con esto creamos por completo una herencia bastante básica, generando que la subclase ahora pueda tener como si fuera propia atributos y métodos provenientes de la clase padre o la clase principal.
+
+Todo esto cambia cuando ambas clases poseen un constructor para entender esto lo veremos en la sección de [INSTRUCCIÓN BASE].
+
+
+
+								INSTRUCCIÓN BASE
+
+
+La instrucción base se trata de dar le a entender al compilador cual de los dos constructores de las clases "apuntar" o "prestar atención" la cuestión está en que para que realmente podamos continuar el compilador solo debe en tener foque sobre un solo constructor, esto obviamente solo en el caso de la instancia de la subclase que hereda de la clase principal o la clase padre... Para que esto funcione en la linea donde se comenzó a usar o dar uso del constructor de la subclase o la clase que hereda usaremos una sintaxis parecida a la herencia pero esta vez haciendo uso de la palabre reservada ( base ) de la siguiente manera más apertura y cierre de parentesis.
+
+ejemplo:
+
+
+public NombreDeLaClase() :  base(){
+
+}
+
+Cuando no existe en la clase padre un constructor realmente la base() se encuentra implicita y vacia, técnicamente la instrucción base está presente en todas las clases siempre pero de manera implicita gracias a la clase superior ( Super clase ).
+
+En caso de que el constructor de la clase padre tenga valores o pida valores para los atrubutos entonces dentro de los parentesis de base() deberemos escribir el mismo  nombre que nos pide en el constructor de la clase padre en la subclase (osea, la misma cantidad de parametros, incluyendo los nombres) pero no incluiremos el tipo de dato de cada parametro, estos datos también deberían de estar presente en el constructor de la subclase
+
+(sé que es bastante confuso todo esto por lo que lo recomendable es leer la documentación oficial, aunque si no se maneja ciertos terminos no ayudaría en lo absoluto.)
+
+por ejemplo:
+
+
+
+CLASE PADRE
+
+class Mamifero{
+
+private string _nombre;
+
+	public Mamifero(string nombre)
+	{
+	
+		this._nombre = nombre;
+
+	}
+
+}
+
+CLASE HIJO
+
+class Humano : Mamifero{
+
+private string _nombre;
+
+	public Humano(string nombre) : base(nombre) //está sería la sintaxis "correcta"
+	{
+	
+		this._nombre = nombre;	
+
+	}
+
+}
+
+
+
+
+
+
+								POLIMORFISMO
+
+
+
+El polimorfismo sería una forma o una modalidad de trabajo en el cual nosotros haremos uso de código existente para hacer lo comportarse de manera diferente dependiendo del contexto que nosotros requerreríamos, donde dependerá lo que necesitemos de una clase en otra con su propia formula y caracterisiticas sin afectar a la anterior con el proposito de reutilizar código y ahorrar memoria, además de agilisar y fácilitar nuestro trabajo claro esta.
+
+¿Cómo funciona? para esto debemos entender como funcionaría o en que ámbito funcionaría, siempre el polimorfismo va a afectar a los métodos de las clases que heredan por ejemplo tenemos una clase padre Profesional y una sub clase Estudiante donde Estudiante hereda de la clase padre Profesional la clase padre tiene un método que dicta si esté es egresado de la Universidad o aun la cursa, entonces para evitar problemas donde en la clase padre sería siempre "CULMINADO" haríamos uso del polimorfimo para usar ese mismo método en la sub clase pero está vez sería "EN CURSO".
+
+para que esto funcione en código debemos de conocer las siguientes palabras reservadas:
+
+1. virtual
+
+2. override
+
+donde virtual como su nombre indica virtualiza o virtualizaría un método de la clase padre para que está pueda modificarse en otras clases que estén heredando directamente de la clase padre. Y override sería la palabra reservada que usaríamos en la sub clase para modificar el método de la clase principal o clase padre teneiendo está palabra reservada la traducción de sobre escritura.
+
+
+la sintaxis sería la siguiente:
+
+
+
+
+CLASE PADRE
+
+//clase
+
+
+
+Entonces para que podamos sobre escribir el método de la clase principal en la sub clase debemos de escribir la palabra reservada Virtual después del modificador de acceso.
+
+class Volar{
+
+//atrubutos de clase
+
+private int _velocidad;
+private int _duracion;
+
+//constructor de clase
+
+	public Volar(int velocidad, int duracion)
+	{
+
+		this._velocidad = velocidad;
+		this._duracion = duracion;
+
+	}
+
+//método getter y setter del atrubuto velocidad
+
+	public int velocidad
+	{
+
+		get{return this._velocidad;}
+		set{this._velocidad = value;}
+
+	}
+
+//método getter y setter del atrubuto duracion
+
+	public int duracion
+	{
+
+
+		get{return this._duracion;}
+		set{this._duracion = value;}
+
+	}	
+
+
+//método de la clase
+
+	public virtual void TecnicaVuelo() //virtualizamos el método de la clase padre
+	{ 
+		MauseClick(duracion,velocidad); // esto no existe como tal en c# pero sería un evento click que aplicaría (teoricamente) una velocidad
+		y duración a algun personaje para volar temporalmente.
+
+	}
+
+}
+
+
+
+SUB CLASE
+
+Entonces para sobre escribir el método de la clase padre en la sub clase debemos hacer uso de la palabra reservada override después del modificador de acceso del método. El nombre del método debe llamarse exactamente igual como en la clase padre.
+
+class Aguila{
+
+private int _duracionVuelo;
+private int _velocidadVuelo;
+
+//constructor de clase haciendo uso de la instrucción base de las clase padre
+
+	public Aguila(int duracionVuelo,int velocidadVuelo) : base(velocidad, duracion)
+	{
+
+		this._duracionVuelo = volicidadVuelo;
+		this._velocidadVuelo = velocidadVuelo;	
+
+	}
+
+
+	public int duracionVuelo
+	{
+		get{return this._duracionVuelo;}
+		set{this._duracion = value;}
+
+	}
+
+	public int velocidadVuelo
+	{
+
+		get{return this._velocidadVuelo;}
+		set{this._velocidadVuelo = value;}
+	}
+	
+
+//ahora sobre escribirmos el método de la clase padre
+
+	public override void TecnicaVuelo()
+	{
+		
+		int potenciador = 0;	
+
+		for(int i = 0; i <= 6; ++i)
+		{
+			
+			potenciador +=3;
+
+		}
+
+		MauseClick(duracionVuelo,velodidadVuelo);
+		bool dobleClick = DoubleClick(potenciador);
+
+		if(potenciador == 6)
+		{
+
+			potenciador = 0;
+		}
+
+		//ahora el método tiene una variable extra, está variable de potenciador en este caso hipotetico tiene como proposito tener un evento doble click
+		que cuando se presione dos veces el click izquierdo aumente 5 veces su velocidad de golpe. Si se clickeo doble click entonces cuando el potenciador
+		llego a 6 entonces volver el potenciador a 0. (Obviamente esto es un ejercicio de observación el cual usa sistemas que no existen).
+
+	
+		
+
+	}
+}
+
+
+
+
+								INTERFACES
+
+
+Las interfaces son una forma o un "contrato" en el cual indicamos que siempre que se implemente la interfaz debe cumplir con lo que la interfaz pida para una clase con la palabre reservada ( interface ), se usa principalmente para los métodos de las clases que heredan de otra, donde indicaríamos si o si que tipo de método debe implementar una clase con todas sus caracterísiticas.
+
+La interfaz debe crearse por fuera de Program como si de una clase se tratase y luego la implementaríamos en la misma linea donde tengamos la herencia :, seguido del nombre la clase padre el la herencia debemos agregar un coma seguirdo del nombre de la interfaz.
+
+Por ejemplo:
+
+
+// generalmente cuando se trata de interfaces se suele dar como nombre la primera letra I mayúscula para indicar de que se trata de una interfaz
+
+interface Ivienes
+{
+	
+	void herencia(); //  aquí indicamos que la clase que implemente está interfaz debe crear si o si un método llamado herencia de tipo void ( vacio / sin por su traducción)
+}
+
+class Hijo : Padre,Ivienes
+{
+
+//... contenido de la clase
+
+//si no se crea el método al instanciar esta clase o incluso al compilar el compilador detectará esto como un error, indicandonos que debemos terminar de implementar la interfaz para que nuestro programa funcione correctamente, de lo contrario una exception no nos permitirá usar la app.
+
+}
+
+
+HECHO CORRECTAMENTE
+
+class Hijo : Padre,Ivienes
+{
+
+//... contenido de la clase
+
+	public void herencia() //entonces aquí si funcionaria el programa en ejecucións
+	{
+
+		//... contenido del méodo
+	
+	}
+}
+
+
+	
+								LINQ
