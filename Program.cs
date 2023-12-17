@@ -16,8 +16,8 @@ class Progam
     try
     {
     Console.WriteLine("Presiona el botón 1 para ver información de la computadora");
-       pc = int.Parse(Console.ReadLine());
-    }catch(Exception e){
+       pc = int.Parse( Console.ReadLine());
+    }catch(Exception){
       Console.WriteLine("No puedes ingresar letras ni caracteres");
     }
     
@@ -44,7 +44,7 @@ class Progam
           {
             elegir = int.Parse(Console.ReadLine());
           }
-          catch (Exception e)
+          catch (Exception)
           {
             Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
           }
@@ -57,7 +57,7 @@ class Progam
             Console.WriteLine("Presiona 0 para ver información del equipo");
             info = int.Parse(Console.ReadLine());
           }
-          catch (Exception e)
+          catch (Exception)
           {
             Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
           }
@@ -73,7 +73,7 @@ class Progam
             elegir = int.Parse(Console.ReadLine());
 
           }
-          catch (Exception e)
+          catch (Exception)
           {
             Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
           }
@@ -93,7 +93,7 @@ class Progam
               elegir = int.Parse(Console.ReadLine());
             }
           }
-          catch (Exception e)
+          catch (Exception)
           {
             Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
           }
@@ -114,7 +114,7 @@ class Progam
             Console.WriteLine("\nelige otra opción del menú");
             elegir = int.Parse(Console.ReadLine());
           }
-          catch (Exception e)
+          catch (Exception)
           {
             Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
           }
@@ -148,7 +148,7 @@ class Progam
                 Console.WriteLine("\nelige otra opción del menú");
                 elegir = int.Parse(Console.ReadLine());
               }
-              catch (Exception e)
+              catch (Exception )
               {
                 Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
               }
@@ -162,7 +162,7 @@ class Progam
                 Console.WriteLine("\nelige otra opción del menú");
                 elegir = int.Parse(Console.ReadLine());
               }
-              catch (Exception e)
+              catch (Exception )
               {
                 Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
               }
@@ -170,7 +170,7 @@ class Progam
 
             }
           }
-          catch (Exception e)
+          catch (Exception )
           {
 
             Console.WriteLine("\nNo puedes ingresar letras ni caracteres, debes ingresar números\n");
