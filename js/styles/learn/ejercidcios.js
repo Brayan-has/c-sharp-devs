@@ -121,3 +121,51 @@
 // hablar(mensaje);
 
 */
+
+const $parrafo = document.getElementById("o"),
+$todo =  document.getElementById("todo");
+
+$parrafo.innerText = "hola mundo";
+$todo.innerText = "soy todo al mismo tiempo";
+$todo.style.color ="red";
+console.log($parrafo);
+
+const $imagen = document.createElement("img");
+
+const $division = document.getElementById("contend");
+
+$division.setAttribute("class", "que");
+
+
+ $division.addEventListener("click",function(e){
+
+     $division.style.backgroundColor = "blue";
+     setTimeout(() => {
+         $division.style.backgroundColor ="red";
+        },1000);
+        alert("¡me he ejecutado correctamente!");
+        e.preventDefault();
+        
+ });
+
+ const $ul = document.createElement("ul"),
+ $par = document.createElement("p");
+
+ document.body.appendChild($ul);
+ document.body.appendChild($par);
+
+ $par.textContent = "soy un parrafo creado desde javaScript puro.";
+
+//  document.body.removeChild($par);
+document.body.appendChild($par.cloneNode(true));
+document.body.stopP
+
+
+
+
+
+
+
+
+
+
