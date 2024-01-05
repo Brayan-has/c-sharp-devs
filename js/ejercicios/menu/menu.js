@@ -1,5 +1,5 @@
 const $ul = document.querySelectorAll("li"),
-$btnMenu = document.querySelector("button"),
+$btnMenu = document.querySelector("#btn"),
 $elVisible = document.getElementById("menu"),
 $parra = document.querySelectorAll("p");
 
@@ -43,7 +43,7 @@ $btnMenu.addEventListener("click",(e)=>{
 $documento.addEventListener("dblclick",e =>{
 
     
-    if(e.target.matches("button")){
+    if(e.target.matches("#btn")){
         
       $elVisible.style.display = "none";
     }

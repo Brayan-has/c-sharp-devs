@@ -1,0 +1,12 @@
+.reloj{
+
+    text-align: center;
+    
+}
+
+#reloj{
+    text-align: center;
+    border: 1px solid red;
+    margin: 20px;
+    padding: 20px;
+}

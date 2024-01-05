@@ -6,6 +6,14 @@ class Progam
   public static void Main(string[] args)
   {
 
+    int num;
+      num  = 2 + 2 != 4 ? 0 : 1; 
+      Console.WriteLine(num);
+
+    //
+  }
+
+  public void menu(){
     //intancia del objeto ordenador 
     Ordenador pcGamer = new Ordenador();
 
@@ -184,13 +192,10 @@ class Progam
 
 
     }
-
-
-
-    //
   }
 
 }
+
 
 
 
