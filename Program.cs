@@ -7,7 +7,7 @@ class Progam
   {
 
     int num;
-      num  = 2 + 2 != 4 ? 0 : 1; 
+      num  = 2 + 2 == 4 ? 0 : 1; 
       Console.WriteLine(num);
 
     //
